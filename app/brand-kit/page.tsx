@@ -35,7 +35,7 @@ const PRESETS: { name: string; tokens: BrandTokens }[] = [
     name: "Warm Sand",
     tokens: {
       bg: "#f5f0e8",
-      card: "#ede8df",
+      card: "#d9d0c3",
       text: "#1a1208",
       sub: "#78716c",
       accent: "#c97941",
@@ -222,12 +222,14 @@ function Preview({ tokens }: { tokens: BrandTokens }) {
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function BrandKitPage() {
+  const [mounted, setMounted] = useState(false);
   const [tokens, setTokens] = useState<BrandTokens>(DEFAULT_TOKENS);
   const [saved, setSaved] = useState(false);
   const [copied, setCopied] = useState(false);
 
-  // Load from localStorage on mount
+  // Mount guard: prevents server/client hydration mismatch for localStorage state
   useEffect(() => {
+    setMounted(true);
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
       if (raw) setTokens(JSON.parse(raw));
@@ -270,6 +272,12 @@ export default function BrandKitPage() {
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
+
+  if (!mounted) {
+    return (
+      <div className="min-h-screen bg-black" />
+    );
+  }
 
   return (
     <div
