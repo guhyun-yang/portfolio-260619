@@ -2,6 +2,7 @@ import Link from "next/link";
 import { HeroSpotlight } from "@/components/hero-spotlight";
 import { BlurFade } from "@/components/blur-fade";
 import { PROJECTS } from "@/lib/work-data";
+import { ContactForm } from "@/components/contact-form";
 
 const EXPERIENCE = [
   { year: "2026", org: "Creative Visual Lab",          role: "Basic Visual Designer"    },
@@ -300,11 +301,9 @@ export default function Home() {
             </p>
           </BlurFade>
 
-          {/* Tally 폼 embed 영역 */}
+          {/* Tally 폼 */}
           <BlurFade delay={0.25}>
-            <div className="flex min-h-[480px] w-full items-center justify-center rounded-xl border border-dashed border-zinc-700 bg-zinc-900/30 sm:min-h-[560px]">
-              <p className="text-sm text-zinc-600">Tally 폼이 여기에 들어갑니다</p>
-            </div>
+            <ContactForm />
           </BlurFade>
 
           {/* Bottom rule + copyright */}
