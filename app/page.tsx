@@ -69,6 +69,12 @@ export default function Home() {
               >
                 Work
               </a>
+              <a
+                href="#contact"
+                className="text-sm font-semibold text-white transition-opacity hover:opacity-50"
+              >
+                Contact
+              </a>
             </nav>
           </BlurFade>
         </header>
@@ -261,8 +267,48 @@ export default function Home() {
             ))}
           </div>
 
+        </div>
+      </section>
+
+      {/* ─── Contact ──────────────────────────────────────────────── */}
+      <section id="contact" className="relative px-8 py-24 sm:px-12">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{ background: "rgba(0,0,0,0.72)" }}
+        />
+        <div className="relative z-10 mx-auto max-w-5xl">
+          <BlurFade delay={0}>
+            <div className="mb-16 h-px w-full bg-zinc-800" />
+          </BlurFade>
+
+          <BlurFade delay={0.05}>
+            <p className="mb-6 text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-600">
+              Contact
+            </p>
+          </BlurFade>
+
+          <BlurFade delay={0.12}>
+            <h2 className="mb-4 text-2xl font-bold leading-snug text-white sm:text-3xl">
+              함께 만들 프로젝트
+            </h2>
+          </BlurFade>
+
+          <BlurFade delay={0.18}>
+            <p className="mb-12 text-sm leading-7 text-zinc-400">
+              브랜드, 제품, 인터페이스, 콘텐츠를 함께 만들고 싶다면 간단히 남겨주세요.
+            </p>
+          </BlurFade>
+
+          {/* Tally 폼 embed 영역 */}
+          <BlurFade delay={0.25}>
+            <div className="flex min-h-[480px] w-full items-center justify-center rounded-xl border border-dashed border-zinc-700 bg-zinc-900/30 sm:min-h-[560px]">
+              <p className="text-sm text-zinc-600">Tally 폼이 여기에 들어갑니다</p>
+            </div>
+          </BlurFade>
+
           {/* Bottom rule + copyright */}
-          <BlurFade delay={0.45}>
+          <BlurFade delay={0.35}>
             <div className="mt-24">
               <div className="mb-6 h-px w-full bg-zinc-800" />
               <p className="text-[10px] text-zinc-700">© 2026 Guhyun Yang</p>
