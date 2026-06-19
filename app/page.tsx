@@ -291,13 +291,13 @@ export default function Home() {
 
           <BlurFade delay={0.12}>
             <h2 className="mb-4 text-2xl font-bold leading-snug text-white sm:text-3xl">
-              함께 만들 프로젝트
+              Let&apos;s build something together
             </h2>
           </BlurFade>
 
           <BlurFade delay={0.18}>
             <p className="mb-12 text-sm leading-7 text-zinc-400">
-              브랜드, 제품, 인터페이스, 콘텐츠를 함께 만들고 싶다면 간단히 남겨주세요.
+              If you have a brand, product, interface, or content project in mind, drop me a message.
             </p>
           </BlurFade>
 
