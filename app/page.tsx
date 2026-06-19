@@ -306,11 +306,19 @@ export default function Home() {
             <ContactForm />
           </BlurFade>
 
-          {/* Bottom rule + copyright */}
+          {/* Bottom rule + copyright + brand kit link */}
           <BlurFade delay={0.35}>
             <div className="mt-24">
               <div className="mb-6 h-px w-full bg-zinc-800" />
-              <p className="text-[10px] text-zinc-700">© 2026 Guhyun Yang</p>
+              <div className="flex items-center justify-between">
+                <p className="text-[10px] text-zinc-700">© 2026 Guhyun Yang</p>
+                <Link
+                  href="/brand-kit"
+                  className="text-[10px] font-semibold text-zinc-600 transition-colors hover:text-[#FFD024]"
+                >
+                  Brand Kit →
+                </Link>
+              </div>
             </div>
           </BlurFade>
         </div>
