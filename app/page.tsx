@@ -65,18 +65,9 @@ export default function Home() {
               </a>
               <a
                 href="#work"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-white transition-opacity hover:opacity-50"
+                className="text-sm font-semibold text-white transition-opacity hover:opacity-50"
               >
                 Work
-                <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden>
-                  <path
-                    d="M10 3v14M3 10l7 7 7-7"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
               </a>
             </nav>
           </BlurFade>
